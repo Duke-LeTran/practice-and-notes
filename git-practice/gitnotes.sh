@@ -71,6 +71,7 @@ git pull origin master
 
 #checking commit history
 git log
+git diff c6f95e09f7da3d1045be1d7de060db1d9088ba68 fd53fc16976ae05da626c6d4493de2aeb99fccc0
 
 
 
