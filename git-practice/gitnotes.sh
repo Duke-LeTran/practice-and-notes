@@ -23,6 +23,7 @@ git initi #intiatializes the folder for git
 #set up first time ever
 git config --global user.name "Duke LeTran"
 git config --global user.email "daletran@ucdavis.edu"
+git config --global credential.helper Duke-LeTran #adds credential for logging push/pull
 
 #.gitignore
 touch .gitignore
