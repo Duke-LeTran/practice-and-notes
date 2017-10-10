@@ -1,5 +1,6 @@
 ## README
 # this is an example of setting up git plus a few simple commands
+# https://www.youtube.com/watch?v=HVsySz-h9r4
 
 ## SYNTAX
 # git <verb> <--options> <args>
@@ -45,6 +46,28 @@ git diff
 git pull origin master
 git push origin master
 
+## BRANCH
+# syntax: git branch <descriptive-branch-name>
+# create a branch for desired feature
+git branch git-branch # create a new branch
+git checkout git-branch #checkout the branch
+git branch #similar to git status, but checking which branch you're in
+#push branch
+git push -u origin <new-branch>
+
+## MERGING
+git checkout master
+git merge <name-of-branch #merging with master
+git branch --merged #if the branch shows up, it means that branch is merged
+git branch -d git-branch #deletes branch
+git push origin --delete git-branch #delete branch in repository also
+
+#remember, always pull before pushing --
+git checkout master
+git pull origin master
+
+#checking commit history
+git log
 
 
 
