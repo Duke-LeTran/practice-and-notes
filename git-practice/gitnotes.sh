@@ -17,7 +17,7 @@
 
 ## BASICS and SETUP
 git --version #check if git exists, version
-git initi #intiatializes the folder for git
+git init #intiatializes the folder for git
 #rm -rf .git // this completely removes git from the the folder
 
 #set up first time ever
