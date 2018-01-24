@@ -11,9 +11,10 @@ git config --global user.name`
 
 ## ASCII VISUAL ##
 ```
+                                            |-----------push----------->
                             |-------------Commit---->	
 |------------Stage Fixes---------->
-[Working Directory]			[Staging Area]		[.git directory]
+[Working Directory]         [Staging Area]      [.git directory]   [git server]
             <---------------Checkout-----------------
 ```
 
