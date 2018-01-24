@@ -20,26 +20,27 @@ git config --global user.name`
 
 
 ## BASICS and SETUP
+
 `git --version #check if git exists, version
 git init #intiatializes the folder for git
 #rm -rf .git // this completely removes git from the the folder`
 
 ### Set up first time ever
+#### 1. Set-up global options
+
+```bash
 git config --global user.name "Duke LeTran"
-
-git config --global user.email "daletran@ucdavis.edu"
-
+git config --global user.email "duke.letran@gmail.com"
 git config --global --unset <variable> # how to remove something
-
 git config --global --edit <variable> # how to edit
+```
 
+#### 2. Set-up gitignore file
 
-#### gitignore
-
+```bash
 touch .gitignore
-
-subl .gitignore #add things like *.csv to ignorefile
-
+subl .gitignore //  add things like *.csv to ignorefile
+```
 ### connecting with remote repositories
 git clone <url> <where-to-clone> #must be empty director or new
 
