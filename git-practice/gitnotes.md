@@ -7,7 +7,7 @@ recommend this youtube video: [link][video].
 
 ## SYNTAX ##
 
-* syntax: git <_verb_> <--options> <_args_>
+* syntax: git <_verb_> --options <_args_>
 
 example:
 ````bash
