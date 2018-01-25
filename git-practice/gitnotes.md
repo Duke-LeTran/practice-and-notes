@@ -7,7 +7,7 @@ recommend this youtube video: [link][video].
 
 ## SYNTAX ##
 
-* syntax: git <-verb> <--options> <-args>
+* syntax: git <_verb_> <--options> <_args_>
 
 example:
 ````bash
@@ -83,7 +83,7 @@ git diff c6f95e09f7da3d1045be1d7de060db1d9088ba68 fd53fc16976ae05da626c6d4493de2
 
 ### D. Branch commands
 
-* syntax: git branch <-descriptive-branch-name>
+* syntax: git branch <_descriptive-branch-name_>
 
 * purpose: create a branch for desired feature; doesn't mess with master
 
