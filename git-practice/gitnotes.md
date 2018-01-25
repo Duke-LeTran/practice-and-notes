@@ -1,13 +1,18 @@
-# README #
-This is an example of setting up git plus a few simple commands
+# Duke's Git Cheatsheet #
+This is my own personal crib sheet for using git and is not intended to teach
+you how to learn git. Imho, the easist way to learn is to just try using the
+the commands on any existing project. For some sort of introduction, I highly 
+recommend this youtube video: [link][video].
 
-[video]:https://www.youtube.com/watch?v=HVsySz-h9r4
 
 ## SYNTAX ##
+
 git <verb> <--options> <args>
 example:
-`git add --help
+````bash
+git add --help
 git config --global user.name`
+````
 
 ## ASCII VISUAL ##
 ```
@@ -17,7 +22,6 @@ git config --global user.name`
 [Working Directory]         [Staging Area]      [.git directory]   [git server]
             <---------------Checkout-----------------
 ```
-
 
 ## I. BASICS and SETUP
 
@@ -113,8 +117,8 @@ git push -u origin <new-branch> #pushes branch to git server
 git push origin --delete git-branch #delete branch in repository also
 ````
 
-
-
+# Link References
+[video]:https://www.youtube.com/watch?v=HVsySz-h9r4
 
 
 
