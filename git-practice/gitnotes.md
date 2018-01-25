@@ -7,11 +7,12 @@ recommend this youtube video: [link][video].
 
 ## SYNTAX ##
 
-git <verb> <--options> <args>
+* git <verb> <--options> <args>
+
 example:
 ````bash
 git add --help
-git config --global user.name`
+git config --global user.name
 ````
 
 ## ASCII VISUAL ##
@@ -43,6 +44,8 @@ git config --global --edit <variable> # how to edit
 ````
 
 ### C. Set-up gitignore file
+
+* note: I assume you use sublime as a text-editor; you can use wtv, really
 
 ````bash
 touch .gitignore
@@ -117,7 +120,7 @@ git push -u origin <new-branch> #pushes branch to git server
 git push origin --delete git-branch #delete branch in repository also
 ````
 
-# Link References
+[//]: # (link references)
 [video]:https://www.youtube.com/watch?v=HVsySz-h9r4
 
 
