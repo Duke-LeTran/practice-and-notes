@@ -54,7 +54,7 @@ subl .gitignore # add things like *.csv to ignorefile
 ### D. connecting with remote repositories
 
 ````bash
-git clone <url> <where-to-clone> #must be empty director or new
+git clone <url> <where-to-clone> #must be empty or new directory
 ````
 
 ## II. General Workflow Commands
@@ -84,7 +84,6 @@ git diff c6f95e09f7da3d1045be1d7de060db1d9088ba68 fd53fc16976ae05da626c6d4493de2
 ### D. Branch commands
 
 * syntax: git branch <_descriptive-branch-name_>
-
 * purpose: create a branch for desired feature; doesn't mess with master
 
 ````bash
@@ -108,9 +107,7 @@ git branch --merged #if the branch shows up, it means that branch is merged
 ### E. Remote commnads 
 
 * purpose: connecting to git servers, i.e., github, bitbucket, etc.
-
 * note: origin is the remote repository, master is the "branch"
-
 * note: remember, always pull before pushing (in case someone pushed before you)
 
 ````bash
