@@ -31,18 +31,15 @@ git config --global user.name
 ````bash
 git --version #check if git exists, version
 git init #intiatializes the folder for git
+git remote add origin user@example.com:/path/to/git-repo #add to server
 #rm -rf .git # this completely removes git from the the folder
 ````
 
-### B. Set-up global options (optional)
+### B. connecting with existing remote repositories
 
 ````bash
-git config --global user.name "Duke LeTran"
-git config --global user.email "duke.letran@gmail.com"
-git config --global --unset <variable> # how to remove something
-git config --global --edit <variable> # how to edit
+git clone <url> <where-to-clone> #must be empty or new directory
 ````
-
 ### C. Set-up gitignore file
 
 * note: I assume you use sublime as a text-editor; you can use wtv, really
@@ -51,10 +48,14 @@ git config --global --edit <variable> # how to edit
 touch .gitignore
 subl .gitignore # add things like *.csv to ignorefile
 ````
-### D. connecting with remote repositories
+
+### D. Set-up global options (optional)
 
 ````bash
-git clone <url> <where-to-clone> #must be empty or new directory
+git config --global user.name "Duke LeTran"
+git config --global user.email "duke.letran@gmail.com"
+git config --global --unset <variable> # how to remove something
+git config --global --edit <variable> # how to edit
 ````
 
 ## II. General Workflow Commands
