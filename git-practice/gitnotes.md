@@ -105,7 +105,7 @@ git branch --merged #if the branch shows up, it means that branch is merged
 #delete branch if necessary
 ````
 
-### E. Remote commnads 
+### F. Remote commnads 
 
 * purpose: connecting to git servers, i.e., github, bitbucket, etc.
 * note: origin is the remote repository, master is the "branch"
