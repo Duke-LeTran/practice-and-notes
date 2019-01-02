@@ -140,12 +140,14 @@ TO-DO
 ## III. References
 * [youtube video][1]
 * [Markdown cheatsheet][2]
-* [Stackoverflow][3]
+* [Stackoverflow - push local to remote][3]
+* [Stackoverflow - revert git to previous commit][4]
 
 
 [1]: https://www.youtube.com/watch?v=HVsySz-h9r4
 [2]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links
 [3]: https://stackoverflow.com/questions/24294034/how-do-i-push-a-local-repo-to-bitbucket-using-sourcetree-without-creating-a-repo
+[4]: https://stackoverflow.com/questions/4114095/how-to-revert-a-git-repository-to-a-previous-commit
 
 
 
