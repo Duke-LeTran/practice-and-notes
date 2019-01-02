@@ -139,7 +139,6 @@ TO-DO
 
 ## III. References
 [video][video1]
-[//]: # (link references)
 [video1]:https://www.youtube.com/watch?v=HVsySz-h9r4
 
 
