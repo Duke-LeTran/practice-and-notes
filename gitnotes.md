@@ -138,9 +138,14 @@ git push origin --delete git-branch #delete branch in repository also
 TO-DO
 
 ## III. References
-* [video][1]
+* [youtube video][1]
+* [Markdown cheatsheet][2]
+* [Stackoverflow [3]
+
 
 [1]: https://www.youtube.com/watch?v=HVsySz-h9r4
+[2]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links
+[3]: https://stackoverflow.com/questions/24294034/how-do-i-push-a-local-repo-to-bitbucket-using-sourcetree-without-creating-a-repo
 
 
 
