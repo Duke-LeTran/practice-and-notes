@@ -133,6 +133,11 @@ git push -u origin <new-branch> #pushes branch to git server
 git push origin --delete git-branch #delete branch in repository also
 ````
 
+### G. How to revert to old branch
+
+TO-DO
+
+## III. References
 [//]: # (link references)
 [video]:https://www.youtube.com/watch?v=HVsySz-h9r4
 
