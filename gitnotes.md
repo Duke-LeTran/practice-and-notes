@@ -138,7 +138,7 @@ git push origin --delete git-branch #delete branch in repository also
 TO-DO
 
 ## III. References
-[video][1]
+* [video][1]
 
 [1]: https://www.youtube.com/watch?v=HVsySz-h9r4
 
