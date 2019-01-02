@@ -138,7 +138,7 @@ git push origin --delete git-branch #delete branch in repository also
 TO-DO
 
 ## III. References
-* [youtube video][1]
+* [Youtube Video - Git][1]
 * [Markdown cheatsheet][2]
 * [Stackoverflow - push local to remote][3]
 * [Stackoverflow - revert git to previous commit][4]
