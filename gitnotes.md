@@ -140,7 +140,7 @@ TO-DO
 ## III. References
 * [youtube video][1]
 * [Markdown cheatsheet][2]
-* [Stackoverflow] [3]
+* [Stackoverflow][3]
 
 
 [1]: https://www.youtube.com/watch?v=HVsySz-h9r4
