@@ -134,6 +134,8 @@ git push origin --delete git-branch #delete branch in repository also
 ````
 
 ### G. How to revert to old branch
+* [StackAbuse Blog](https://stackabuse.com/git-revert-to-a-previous-commit/)
+* [Atlassian Git Rebase Blog](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
 
 TO-DO
 
