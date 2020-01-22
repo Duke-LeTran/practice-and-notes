@@ -73,4 +73,4 @@ SELECT a.HSP_ACCOUNT_NAME "Patient Name",
 WHERE dx.FINAL_DX_POA_C = 1
 ```
 
-![alt text](link to picture)
+![ifandonlyifSQL](https://github.com/Duke-LeTran/practice-and-notes/blob/master/pics/2020-01-22%20ifnonlyif_SQL.png)
