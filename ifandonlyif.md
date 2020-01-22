@@ -25,7 +25,8 @@ T    | *F*  | *F*  | T    | *F*
 # Filter on join or where clause
 
 ## Summary
-* JOIN:  Filtering in the JOIN allows the possibility of no matches
+* NOTE, it is important -- inner join would make tese differences the same. Only in OUTER join does this matter
+* JOIN:  Filtering in the JOIN allows the possibility of no matches (effectively does nothing)
 * WHERE: Filtering in the WHERE clause may discard some hospital accounts.
 
 ## Two events
@@ -33,7 +34,7 @@ T    | *F*  | *F*  | T    | *F*
 * A | Filter
 
 ## if statements
-* JOIN: **Only if** a match happens (necessary condiion), will filtering occur (tho nulls may also be returned) 
+* JOIN: **Only if** a match happens (necessary condition), will filtering occur (tho nulls may also be returned) 
 * WHERE: **If and only if** a match happens, will filtering definitely occur (non matches are discarded, lose hospital accounts)
 
 . | Symbol | Type_if | Sufficient vs Necessary | English
@@ -44,7 +45,7 @@ T    | *F*  | *F*  | T    | *F*
 
 
 ```{SQL}
--- ##JOIN CLAUSE
+-- ##JOIN CLAUSE, note that all nulls on left are included, a (ONLY IF) dx
 USE Clarity_Aug19
 SELECT a.HSP_ACCOUNT_NAME "Patient Name",
        a.HSP_ACCOUNT_ID "a_HAR",
@@ -52,13 +53,25 @@ SELECT a.HSP_ACCOUNT_NAME "Patient Name",
        dx.DX_ID "Diagnosis ID",
        dx.FINAL_DX_POA_C "POA?"
   FROM HSP_ACCOUNT a LEFT OUTER JOIN HSP_ACCT_DX_LIST dx
+      ON a.HSP_ACCOUNT_ID = dx.HSP_ACCOUNT_ID
+--      AND dx.FINAL_DX_POA_C IS NOT NULL
+ORDER BY a_HAR
+--WHERE dx.FINAL_DX_POA_C = 1
+
+-- ## JOIN CLAUSE, tbl switched, dx (ONLY IF) a
+USE Clarity_Aug19
+SELECT a.HSP_ACCOUNT_NAME "Patient Name",
+       a.HSP_ACCOUNT_ID "a_HAR",
+       dx.HSP_ACCOUNT_ID "dx_HAR",
+       dx.DX_ID "Diagnosis ID",
+       dx.FINAL_DX_POA_C "POA?"
+  FROM HSP_ACCT_DX_LIST dx LEFT OUTER JOIN HSP_ACCOUNT a
       ON a.HSP_ACCOUNT_ID = dx.HSP_ACCOUNT_ID
       AND dx.FINAL_DX_POA_C = 1
---WHERE dx.FINAL_DX_POA_C = 1
-```
+ORDER BY a_HAR
+--WHERE dx.FINAL_DX_POA_C <> 1 AND dx.FINAL_DX_POA_C IS NOT NULL
 
-```{SQL}
--- ##WHERE CLAUSE
+-- ##WHERE CLAUSE, effectively an inner join, if and only if (IFF)
 USE Clarity_Aug19
 SELECT a.HSP_ACCOUNT_NAME "Patient Name",
        a.HSP_ACCOUNT_ID "a_HAR",
@@ -67,8 +80,17 @@ SELECT a.HSP_ACCOUNT_NAME "Patient Name",
        dx.FINAL_DX_POA_C "POA?"
   FROM HSP_ACCOUNT a LEFT OUTER JOIN HSP_ACCT_DX_LIST dx
       ON a.HSP_ACCOUNT_ID = dx.HSP_ACCOUNT_ID
---      AND dx.FINAL_DX_POA_C = 1
-WHERE dx.FINAL_DX_POA_C = 1
+--      AND dx.FINAL_DX_POA_C IS NOT NULL
+ORDER BY a_HAR
+--WHERE dx.FINAL_DX_POA_C = 1
+
+
+SELECT dx.FINAL_DX_POA_C, COUNT(*) count FROM HSP_ACCT_DX_LIST dx
+GROUP BY dx.FINAL_DX_POA_C
 ```
 
 ![ifandonlyifSQL](https://github.com/Duke-LeTran/practice-and-notes/blob/master/pics/2020-01-22%20ifnonlyif_SQL.png)
+
+# Links
+* https://math.stackexchange.com/questions/68293/what-is-the-difference-between-only-if-and-iff
+* https://stackoverflow.com/questions/354070/sql-join-where-clause-vs-on-clause
