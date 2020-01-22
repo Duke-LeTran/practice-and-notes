@@ -41,8 +41,6 @@ T    | *F*  | *F*  | T    | *F*
 2 | A → B | Only If | B is necessary for A | Only if the match happens, a necessary condition, i.e., can’t be other matches, will then the filter happen (tho we could  return nulls tho)
 3 | A⟺B | If and only if | B is sufficient and necessary for A | Filltering will definitely happen and only by that match condition. She will not leave any apple uneaten, and she will not eat any other type of fruit.
 
-* **Only if** 
-
 
 
 ```{SQL}
