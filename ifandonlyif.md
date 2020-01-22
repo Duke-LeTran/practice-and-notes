@@ -13,9 +13,9 @@ A | Madison eats the apple
 
 
 .    | .    | B sufficient    | B is necessary    | Sufficient & Necessary 
-.    | .    | if   | only if   | iff 
-A    | B    | A<-B | A->B | A⟺B
 :---:  | :---:  | :---:  | :---:  | :---: 
+.    | .    | if   | only if   | iff 
+A    | B    | A⇐B | A⇒B | A⟺B
 T    | T    | T    | T    | T 
 T    | F    | F    | T    | F 
 *F*  | T    | T    | F    | F 
