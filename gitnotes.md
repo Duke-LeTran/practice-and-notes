@@ -72,6 +72,10 @@ git remote rm origin #removes the remote called 'origin'
 git clone <url> <where-to-clone> #must be empty or new directory
 ````
 
+### 4. Pushing to more than one remote
+
+[Working with Git remotes and pushing to multiple Git repositories](https://jigarius.com/blog/multiple-git-remote-repositories)
+
 
 ## II. General Workflow Commands
 ### A. Staging commands
