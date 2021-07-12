@@ -10,8 +10,8 @@ import numpy as np
 from multiprocessing import Pool
 
 def brute_force(word):
+    """Pass 'Hello, World' as an example"""
     start_time = time.time()
-    "Pass 'Hello, World' as an example"
     target_array = list(word)
     string_array = [""] * len(target_array)
     i = 0
