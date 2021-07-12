@@ -5,12 +5,46 @@ import random
 import time
 import tqdm
 
-target_array = list("Hello, World")
-string_array = [""] * len(target_array)
-i = 0
-while i < len(target_array):
-    string_array[i] = chr(random.randint(32,126))
-    if string_array[i] == target_array[i]:
-        i += 1
-    print("".join(string_array))
-    time.sleep(0.006)
+from multiprocessing import Pool
+
+def brute_force(word):
+    start_time = time.time()
+    "Pass 'Hello, World' as an example"
+    target_array = list(word)
+    string_array = [""] * len(target_array)
+    i = 0
+    while i < len(target_array):
+        string_array[i] = chr(random.randint(32,126))
+        if string_array[i] == target_array[i]:
+            i += 1
+        print("".join(string_array))
+        time.sleep(0.006)
+    end_time = time.time() - start_time
+    return f'Done! Brute forced {word} took {end_time}.' 
+
+def main():
+    # serial processing
+    print("# Serial processing begins.")
+    time.sleep(1)
+    start_time = time.time()
+    ls_words = ['pandas', 'health', 'World']
+    for word in ls_words:
+        brute_force(word)
+    serial_end_time = time.time() - start_time 
+
+    # parallel processing
+    print("# Parallel processing begins.")
+    time.sleep(1)
+    start_time = time.time()
+    with Pool(processes=3) as pool:
+        result = pool.map(brute_force, ls_words)
+    
+    parallel_end_time = time.time() - start_time
+    print(result)
+    print(f'Serial processing time took {serial_end_time}.')
+    print(f'Parallel processing time took {parallel_end_time}.')
+
+
+
+if __name__ == '__main__':
+    main()
