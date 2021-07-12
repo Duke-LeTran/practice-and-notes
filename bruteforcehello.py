@@ -1,9 +1,10 @@
 # https://www.reddit.com/r/ProgrammerHumor/comments/8fdyf0/i_heard_were_brute_forcing_hello_world_now/
 # https://imgur.com/KvFcSy5
-# 
+# https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing
+
 import random
 import time
-import tqdm
+#from tqdm import tqdm 
 
 from multiprocessing import Pool
 
