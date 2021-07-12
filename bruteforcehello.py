@@ -4,6 +4,7 @@
 
 import random
 import time
+import numpy as np
 #from tqdm import tqdm 
 
 from multiprocessing import Pool
@@ -23,7 +24,14 @@ def brute_force(word):
     end_time = time.time() - start_time
     return f'Done! Brute forced {word} took {end_time}.' 
 
+def exponent(x):
+    time.sleep(0.006)
+    return x**2
+
 def main():
+    """
+    This provides an example of a random task, ie, brute forcing random letters
+    """
     # serial processing
     print("# Serial processing begins.")
     time.sleep(1)
@@ -45,7 +53,32 @@ def main():
     print(f'Serial processing time took {serial_end_time}.')
     print(f'Parallel processing time took {parallel_end_time}.')
 
+def main2():
+    """
+    This provides an example of a more consistent task, ie, exponent
+    """
+    # serial processing
+    print("# Serial processing begins.")
+    time.sleep(1)
+    start_time = time.time()
+    ls_nums = np.linspace(1,1000,1000)
+    for num in ls_nums:
+        exponent(num)
+    serial_end_time = time.time() - start_time 
+
+    # parallel processing
+    print("# Parallel processing begins.")
+    time.sleep(1)
+    start_time = time.time()
+    with Pool(processes=3) as pool:
+        result = pool.map(exponent, ls_nums)
+    
+    parallel_end_time = time.time() - start_time
+    print(result)
+    print(f'Serial processing time took {serial_end_time}.')
+    print(f'Parallel processing time took {parallel_end_time}.')
+
 
 
 if __name__ == '__main__':
-    main()
+    main2()
